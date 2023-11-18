@@ -5,8 +5,9 @@ declare(strict_types=1);
 namespace RespectValidationRules\Exceptions;
 
 use Respect\Validation\Exceptions\NestedValidationException;
+use Respect\Validation\Exceptions\NonOmissibleException;
 
-class DynamicAttrException extends NestedValidationException
+class DynamicAttrException extends NestedValidationException implements NonOmissibleException
 {
     public const NOT_PRESENT = 'not_present';
     public const INVALID = 'invalid';
