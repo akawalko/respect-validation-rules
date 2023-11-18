@@ -6,7 +6,7 @@ namespace RespectValidationRules\Exceptions;
 
 use Respect\Validation\Exceptions\NestedValidationException;
 
-class DynamicAttrExceptionsException extends NestedValidationException
+class DynamicAttrException extends NestedValidationException
 {
     public const NOT_PRESENT = 'not_present';
     public const INVALID = 'invalid';
@@ -21,4 +21,9 @@ class DynamicAttrExceptionsException extends NestedValidationException
             self::INVALID => 'Attribute {{name}} must not validate',
         ],
     ];
+
+    protected function chooseTemplate(): string
+    {
+        return $this->getParam('hasReference') ? self::INVALID : self::NOT_PRESENT;
+    }
 }
