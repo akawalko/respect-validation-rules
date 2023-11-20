@@ -7,7 +7,7 @@ This repository will be a set of additional rules for the brilliant data validat
 
 ## Install
 ### Require php: >= 8.0
-todo
+    composer require akawalko/respect-validation-rules
 
 ## Usage
 After installing the package in the place where you want to use my rules, you must use the autoloder and import classes 
