@@ -1,6 +1,7 @@
 {
   "name": "akawalko/respect-validation-rules",
   "description": "Custom rules for the most awesome validation engine ever created for PHP.",
+  "type": "library",
   "minimum-stability": "stable",
   "license": "MIT",
   "authors": [
